@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamFormsRealmDbMvvmNs.Views.UpdateOrDeleteCustomer"
+             xmlns:customerVm="clr-namespace:XamFormsRealmDbMvvmNs.ViewModels">
+    <ContentPage.BindingContext>
+        <customerVm:CustomerViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Label Text="Enter Id"/>
+        <Entry Text="{Binding Customer.CustomerId, Mode=TwoWay}"
+               Keyboard="Numeric"/>
+        <Label Text="Firstname"/>
+        <Entry Text="{Binding Customer.Firstname, Mode=TwoWay}"/>
+        <Label Text="Lastname"/>
+        <Entry Text="{Binding Customer.Lastname, Mode=TwoWay}"/>
+        <Button Text="Update Customer"
+                Command="{Binding UpdateCustomer}"/>
+        <Button Text="Delete Customer"
+                Command="{Binding DeleteCustomer}"/>
+    </StackLayout>
+</ContentPage>

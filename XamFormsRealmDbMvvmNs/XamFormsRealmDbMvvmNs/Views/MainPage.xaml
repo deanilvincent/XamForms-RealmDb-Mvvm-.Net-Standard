@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamFormsRealmDbMvvmNs.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="List of Customers"
+                    Clicked="Button_OnClickedListOfCustomer"/>
+            <Button Text="Create Customer"
+                    Clicked="Button_OnClickedCreateCustomer"/>
+            <Button Text="Update/Delete Customer"
+                    Clicked="Button_OnClickedUpdateDeleteCustomer"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

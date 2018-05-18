@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamFormsRealmDbMvvmNs.Views.CreateCustomer"
+             xmlns:customerVm="clr-namespace:XamFormsRealmDbMvvmNs.ViewModels">
+    <ContentPage.BindingContext>
+        <customerVm:CustomerViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Label Text="Firstname"/>
+        <Entry Text="{Binding Customer.Firstname, Mode=TwoWay}"/>
+        <Label Text="Lastname"/>
+        <Entry Text="{Binding Customer.Lastname, Mode=TwoWay}"/>
+        <Button Command="{Binding SubmitCustomer}" Text="Submit"/>
+    </StackLayout>
+</ContentPage>
